@@ -11,22 +11,21 @@
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
 background:black;
+font-family:Arial, Helvetica, sans-serif;
 color:white;
 text-align:center;
 }
 
-.overlay{
-background:rgba(0,0,0,0.75);
-min-height:100vh;
+.container{
+max-width:420px;
+margin:auto;
 padding:30px 20px;
 }
 
 .logo{
 width:100%;
 max-width:420px;
-margin-top:20px;
 margin-bottom:10px;
 }
 
@@ -34,11 +33,6 @@ margin-bottom:10px;
 font-size:20px;
 color:#ddd;
 margin-bottom:30px;
-}
-
-.container{
-max-width:420px;
-margin:auto;
 }
 
 .btn{
@@ -51,31 +45,39 @@ border-radius:14px;
 text-decoration:none;
 font-weight:bold;
 font-size:18px;
-box-shadow:0 6px 20px rgba(0,0,0,0.5);
-transition:0.2s;
+box-shadow:0 6px 20px rgba(0,0,0,0.6);
+transition:0.25s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
 }
 
+/* animación botón principal */
 .whatsapp{
 background:#f4c430;
 color:black;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(244,196,48,0.7);}
+70%{box-shadow:0 0 0 15px rgba(244,196,48,0);}
+100%{box-shadow:0 0 0 0 rgba(244,196,48,0);}
 }
 
 .instagram{
-background:linear-gradient(145deg,#1c1c1c,#2a2a2a);
+background:#1c1c1c;
 color:white;
 }
 
-.review{
-background:linear-gradient(145deg,#1c1c1c,#2a2a2a);
+.price{
+background:#1c1c1c;
 color:white;
 }
 
 .maps{
-background:linear-gradient(145deg,#1c1c1c,#2a2a2a);
+background:#1c1c1c;
 color:white;
 }
 
@@ -95,15 +97,13 @@ color:#aaa;
 
 <body>
 
-<div class="overlay">
+<div class="container">
 
 <img src="logo.png" class="logo">
 
 <div class="subtitle">
-Estética Vehicular y Accesorios
+Estética Vehicular y Accesorios 🚗
 </div>
-
-<div class="container">
 
 <a class="btn whatsapp" href="https://wa.me/5493764531414?text=Hola%20quiero%20consultar%20por%20estetica%20vehicular">
 <i class="fa-brands fa-whatsapp icon"></i>
@@ -115,17 +115,15 @@ Consultar por WhatsApp
 Ver trabajos en Instagram
 </a>
 
-<a class="btn review" href="https://maps.app.goo.gl/kv9zfBrGRkUR9yBm9">
-<i class="fa-solid fa-star icon"></i>
-Dejar una reseña en Google
+<a class="btn price" href="https://wa.me/5493764531414?text=Hola%20quiero%20consultar%20precios%20de%20estetica%20vehicular">
+<i class="fa-solid fa-tag icon"></i>
+Consultar precios
 </a>
 
 <a class="btn maps" href="https://maps.google.com/?q=Av.+17+de+Agosto+2216,+Posadas,+Misiones">
 <i class="fa-solid fa-location-dot icon"></i>
 Cómo llegar al local
 </a>
-
-</div>
 
 <div class="footer">
 Gracias por visitar Romero Detail Studio
