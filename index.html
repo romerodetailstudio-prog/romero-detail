@@ -6,36 +6,65 @@
 <title>Romero Detail Studio</title>
 
 <style>
+
 body{
 margin:0;
-background:#0f0f0f;
 font-family:Arial, Helvetica, sans-serif;
-text-align:center;
+background:#0b0b0b;
 color:white;
+text-align:center;
 }
 
-.container{
-padding:25px;
-max-width:500px;
-margin:auto;
+/* fondo con logo */
+.hero{
+background-image:url("logo-bg.png.png");
+background-size:cover;
+background-position:center;
+height:260px;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+padding-bottom:20px;
+}
+
+/* capa oscura sobre el fondo */
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:260px;
+background:rgba(0,0,0,0.65);
 }
 
 .title{
-font-size:34px;
+position:relative;
+font-size:28px;
 font-weight:bold;
-margin-top:20px;
 color:#FFD000;
+z-index:1;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:25px;
 }
 
 .subtitle{
-color:#aaa;
-margin-bottom:30px;
+color:#cfcfcf;
+margin-bottom:25px;
+font-size:17px;
 }
 
 .btn{
-display:block;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
 padding:18px;
-margin:12px 0;
+margin:14px 0;
 border-radius:14px;
 text-decoration:none;
 font-weight:bold;
@@ -44,7 +73,7 @@ transition:0.2s;
 }
 
 .btn:hover{
-transform:scale(1.03);
+transform:scale(1.04);
 }
 
 .whatsapp{
@@ -53,58 +82,70 @@ color:black;
 }
 
 .instagram{
-background:#1f1f1f;
-color:white;
+background:#1a1a1a;
 border:1px solid #333;
+color:white;
 }
 
 .review{
-background:#2b2b2b;
+background:#1a1a1a;
+border:1px solid #333;
 color:white;
 }
 
 .maps{
-background:#2b2b2b;
+background:#1a1a1a;
+border:1px solid #333;
 color:white;
 }
 
-.footer{
-margin-top:30px;
-font-size:13px;
-color:#777;
+.icon{
+font-size:20px;
 }
+
+.footer{
+margin-top:25px;
+color:#777;
+font-size:14px;
+}
+
 </style>
 </head>
 
 <body>
 
+<div class="hero">
+<div class="title">ROMERO DETAIL STUDIO</div>
+</div>
+
 <div class="container">
 
-<img src="Logo2026.png.png" style="width:100%;max-width:360px;margin-top:20px;">
-
 <div class="subtitle">
-Estética Vehicular y Accesorios 🚗
+Estética Vehicular y Accesorios
 </div>
 
 <a class="btn whatsapp" href="https://wa.me/5493764531414?text=Hola%20quiero%20consultar%20por%20estetica%20vehicular">
+<span class="icon">💬</span>
 Consultar por WhatsApp
 </a>
 
 <a class="btn instagram" href="https://www.instagram.com/romeroycia_accesorios/">
+<span class="icon">📸</span>
 Ver trabajos en Instagram
 </a>
 
 <a class="btn review" href="https://maps.app.goo.gl/kv9zfBrGRkUR9yBm9">
 <span class="icon">⭐</span>
-Dejar una reseña en Google
+Dejar una reseña
 </a>
 
-<a class="btn maps" href="https://maps.app.goo.gl/3gb6UYR2SjZu5iQg8">
-Cómo llegar al local
+<a class="btn maps" href="https://maps.google.com/?q=Av.+17+de+Agosto+2216,+Posadas,+Misiones">
+<span class="icon">📍</span>
+Cómo llegar
 </a>
 
 <div class="footer">
-Gracias por visitar Romero Detail Studio
+Gracias por visitar Romero
 </div>
 
 </div>
