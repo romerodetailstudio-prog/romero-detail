@@ -5,108 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Romero Detail Studio</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0b0b0b;
+background:url("logo-bg.png") center/cover no-repeat fixed;
 color:white;
 text-align:center;
 }
 
-/* fondo con logo */
-.hero{
-background-image:url("logo-bg.png");
-background-size:cover;
-background-position:center;
-height:260px;
-display:flex;
-align-items:flex-end;
-justify-content:center;
-padding-bottom:20px;
+.overlay{
+background:rgba(0,0,0,0.75);
+min-height:100vh;
+padding:30px 20px;
 }
 
-/* capa oscura sobre el fondo */
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-height:260px;
-background:rgba(0,0,0,0.65);
-}
-
-.title{
-position:relative;
-font-size:28px;
-font-weight:bold;
-color:#FFD000;
-z-index:1;
-}
-
-.container{
-max-width:500px;
-margin:auto;
-padding:25px;
+.logo{
+width:100%;
+max-width:420px;
+margin-top:20px;
+margin-bottom:10px;
 }
 
 .subtitle{
-color:#cfcfcf;
-margin-bottom:25px;
-font-size:17px;
+font-size:20px;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.container{
+max-width:420px;
+margin:auto;
 }
 
 .btn{
 display:flex;
 align-items:center;
-justify-content:center;
-gap:12px;
-padding:18px;
-margin:14px 0;
+gap:15px;
+padding:18px 22px;
+margin:16px 0;
 border-radius:14px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
+font-size:18px;
+box-shadow:0 6px 20px rgba(0,0,0,0.5);
 transition:0.2s;
 }
 
 .btn:hover{
-transform:scale(1.04);
+transform:translateY(-3px);
 }
 
 .whatsapp{
-background:#FFD000;
+background:#f4c430;
 color:black;
 }
 
 .instagram{
-background:#1a1a1a;
-border:1px solid #333;
+background:linear-gradient(145deg,#1c1c1c,#2a2a2a);
 color:white;
 }
 
 .review{
-background:#1a1a1a;
-border:1px solid #333;
+background:linear-gradient(145deg,#1c1c1c,#2a2a2a);
 color:white;
 }
 
 .maps{
-background:#1a1a1a;
-border:1px solid #333;
+background:linear-gradient(145deg,#1c1c1c,#2a2a2a);
 color:white;
 }
 
 .icon{
-font-size:20px;
+font-size:26px;
+width:35px;
+text-align:center;
 }
 
 .footer{
-margin-top:25px;
-color:#777;
-font-size:14px;
+margin-top:40px;
+color:#aaa;
 }
 
 </style>
@@ -114,38 +95,40 @@ font-size:14px;
 
 <body>
 
-<div class="hero">
-<div class="title">ROMERO DETAIL STUDIO</div>
-</div>
+<div class="overlay">
 
-<div class="container">
+<img src="logo.png" class="logo">
 
 <div class="subtitle">
 Estética Vehicular y Accesorios
 </div>
 
+<div class="container">
+
 <a class="btn whatsapp" href="https://wa.me/5493764531414?text=Hola%20quiero%20consultar%20por%20estetica%20vehicular">
-<span class="icon">💬</span>
+<i class="fa-brands fa-whatsapp icon"></i>
 Consultar por WhatsApp
 </a>
 
 <a class="btn instagram" href="https://www.instagram.com/romeroycia_accesorios/">
-<span class="icon">📸</span>
+<i class="fa-brands fa-instagram icon"></i>
 Ver trabajos en Instagram
 </a>
 
 <a class="btn review" href="https://maps.app.goo.gl/kv9zfBrGRkUR9yBm9">
-<span class="icon">⭐</span>
-Dejar una reseña
+<i class="fa-solid fa-star icon"></i>
+Dejar una reseña en Google
 </a>
 
 <a class="btn maps" href="https://maps.google.com/?q=Av.+17+de+Agosto+2216,+Posadas,+Misiones">
-<span class="icon">📍</span>
-Cómo llegar
+<i class="fa-solid fa-location-dot icon"></i>
+Cómo llegar al local
 </a>
 
+</div>
+
 <div class="footer">
-Gracias por visitar Romero
+Gracias por visitar Romero Detail Studio
 </div>
 
 </div>
